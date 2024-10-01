@@ -4,6 +4,8 @@ require('dotenv').config();
 const app = express();
 const port = process.env.PORT || 3000;
 
+app.use(express.static(path.join(__dirname, 'public')));
+
 // Azure SQL Database Configuration
 const config = {
     user: process.env.DB_USER, // Replace with your database username
